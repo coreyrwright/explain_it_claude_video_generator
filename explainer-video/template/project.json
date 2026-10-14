@@ -1,0 +1,27 @@
+{
+  "name": "my-video",
+  "title": "My Video",
+  "output": "../my-video.mp4",
+  "budget": { "capUsd": 10, "stopAtUsd": 9.25 },
+  "eden": {
+    "base": "https://api.edenai.run/v3",
+    "tags": { "brand": "_template", "project": "my-video" }
+  },
+  "voice": { "model": "elevenlabs/eleven_v3", "id": "bIHbv24MWmeRgasZH58o", "name": "will" },
+  "spoken": [],
+  "align": { "gap": 1.0, "gapBefore": {}, "expand": {} },
+  "music": {
+    "bpm": 112,
+    "key": "G major",
+    "pick": "cartoon_marimba",
+    "prompts": {
+      "cartoon_uke": "a playful, warm, upbeat cartoon explainer music cue: bouncy strummed ukulele on the offbeats, glockenspiel plinks, pizzicato strings, a round bouncy bass, a soft kick drum on every beat and light hand claps on beats two and four.",
+      "cartoon_marimba": "a quirky, happy, upbeat cartoon explainer music cue: plucked acoustic guitar playing a bouncy rhythm, marimba and glockenspiel accents, pizzicato strings, a bouncy bass, a soft kick drum and light finger snaps and claps on beats two and four."
+    }
+  },
+  "review": {
+    "film": "A narrated animated explainer film. TODO: topic, audience, where it is shown, and the intended style (look, music, tone).",
+    "models": { "video": "google/gemini-3.8-flash", "frames": "openai/gpt-5.5", "audio": "google/gemini-3.1-pro-preview" }
+  },
+  "python": null
+}

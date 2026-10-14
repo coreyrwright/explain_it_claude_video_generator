@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explainer</title>
+<link rel="stylesheet" href="css/fonts.css">
+<style>
+  /* player colours come from js/theme.js (main.js sets these variables) */
+  :root { --ink: #1F2933; --primary: #3E4C59; --accent: #2680C2; --highlight: #F0B429; --bg: #F5F7FA; --muted: #CBD2D9; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--ink); color: #FFFFFF; font-family: var(--font, "Inter"), Arial, sans-serif; }
+  #wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%; gap: 16px; padding: 16px; }
+  #frame { position: relative; width: min(100%, calc((100vh - 110px) * 16 / 9)); aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; background: var(--bg); }
+  canvas { display: block; width: 100%; height: 100%; }
+  #cover { position: absolute; inset: 0; display: grid; place-items: center; cursor: pointer; background: rgba(0, 0, 0, 0.18); transition: opacity .3s; }
+  #cover.hidden { opacity: 0; pointer-events: none; }
+  #cover span { background: var(--primary); color: #FFFFFF; font-weight: 700; font-size: clamp(16px, 2vw, 28px); padding: .6em 1.3em; border-radius: 12px; }
+  #controls { display: flex; align-items: center; gap: 12px; width: min(100%, calc((100vh - 110px) * 16 / 9)); font-size: 16px; }
+  button { font: inherit; font-weight: 600; background: var(--primary); color: #FFFFFF; border: 1px solid var(--accent); border-radius: 12px; padding: 8px 16px; cursor: pointer; }
+  button:hover { filter: brightness(0.92); }
+  input[type=range] { flex: 1; accent-color: var(--accent); }
+  #time { font-variant-numeric: tabular-nums; color: var(--muted); min-width: 96px; text-align: right; }
+  body.render #controls, body.render #cover { display: none; }
+  body.render #wrap { padding: 0; }
+  body.render #frame { width: 1920px; height: 1080px; border-radius: 0; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="frame">
+    <canvas id="stage" aria-label="Explainer video"></canvas>
+    <div id="cover"><span>Play with sound</span></div>
+  </div>
+  <div id="controls">
+    <button id="play">Play</button>
+    <input id="scrub" type="range" min="0" value="0" aria-label="Seek">
+    <span id="time">0:00</span>
+    <button id="fs">Full screen</button>
+  </div>
+  <audio id="mix" src="assets/audio/mix.m4a" preload="auto"></audio>
+</div>
+<script src="js/theme.js"></script>
+<script src="js/project-config.js"></script>
+<script src="js/vo-timing.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/kit.js"></script>
+<script src="js/core.js"></script>
+<!-- scenes:start (tools rewrite this list from js/scenes/*.js, sorted by file name) -->
+<script src="js/scenes/s1_demo.js"></script>
+<!-- scenes:end -->
+<script src="js/assemble.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

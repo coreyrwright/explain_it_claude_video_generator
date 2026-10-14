@@ -1,0 +1,38 @@
+{
+  "id": "example",
+  "name": "Example Co",
+  "palette": {
+    "ink": "#1B1F3B",
+    "primary": "#2D3A8C",
+    "accent": "#4F6BED",
+    "highlight": "#FFC857",
+    "bg": "#F4F6FB",
+    "surface": "#FFFFFF",
+    "line": "#D5DAE6",
+    "accentTint": "#DCE3FD",
+    "bgTint": "#E8ECF7",
+    "muted": "#646B85"
+  },
+  "font": {
+    "family": "Inter",
+    "weights": [400, 600, 700],
+    "files": { "400": "Inter-Regular.ttf", "600": "Inter-SemiBold.ttf", "700": "Inter-Bold.ttf" }
+  },
+  "logo": {
+    "color": "logo_color.svg",
+    "white": "logo_white.svg"
+  },
+  "style": { "outline": 5, "shadow": "offset", "radius": 28 },
+  "chrome": { "chapterPill": true, "logo": true },
+  "icons": { "source": "folder", "color": "color", "white": "white" },
+  "spoken": [],
+  "align": { "expand": {} },
+  "rules": [
+    "Use only the palette roles; the highlight yellow is for small accents and never for body text.",
+    "Icons come from this brand's icons/ folder: the color version on light surfaces, the white version on dark ones, always next to a text label.",
+    "Inter only (400, 600, 700). Sentence case, no emoji.",
+    "The logo files are used as supplied (color on light, white on dark) and never redrawn, recolored or stretched.",
+    "Show a bad or broken state with gray, dashed outlines or a sad face rather than alarm colors.",
+    "Product names appear as text labels, never as their logos."
+  ]
+}

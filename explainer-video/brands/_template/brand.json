@@ -1,0 +1,57 @@
+{
+  "id": "_template",
+  "name": "Neutral template brand. Copy this folder, rename it and change every value.",
+
+  "palette": {
+    "ink": "#1F2933",
+    "primary": "#3E4C59",
+    "accent": "#2680C2",
+    "highlight": "#F0B429",
+    "bg": "#F5F7FA",
+    "surface": "#FFFFFF",
+    "line": "#CBD2D9",
+    "accentTint": "#BCE0FD",
+    "bgTint": "#E4E7EB",
+    "muted": "#7B8794"
+  },
+
+  "font": {
+    "family": "Inter",
+    "weights": [400, 600, 700],
+    "files": { "400": "Inter-Regular.ttf", "600": "Inter-SemiBold.ttf", "700": "Inter-Bold.ttf" }
+  },
+
+  "logo": {
+    "color": "logo_color.svg",
+    "white": "logo_white.svg"
+  },
+
+  "style": { "outline": 5, "shadow": "offset", "radius": 28 },
+
+  "chrome": { "chapterPill": true, "logo": true },
+
+  "icons": { "source": "none", "color": "color", "white": "white" },
+
+  "spoken": [],
+  "align": { "expand": {} },
+
+  "rules": [
+    "One short rule per line, written for the animators and the illustrator. Example: no red.",
+    "Example: logo files are used as supplied and never redrawn.",
+    "Example: US English, sentence case, no emoji."
+  ],
+
+  "_fields": {
+    "id": "folder name; also written into the Eden usage tags (brand=<id>)",
+    "name": "display name",
+    "palette": "ten colour ROLES as #RRGGBB. ink: text and outlines. primary: main brand colour (large surfaces, chips). accent: vibrant brand colour (highlights, key objects). highlight: small pops (stamps, underlines, never body text). bg: canvas background. surface: card and window fill (usually white). line: borders and dividers. accentTint: pale accent for fills. bgTint: slightly darker than bg. muted: secondary text and disabled states. Legacy names used by older scenes: dark=ink, purple=primary, vibrant=accent, green=lime=highlight, light=bg, gray=line, lilac=accentTint, mist=bgTint, grayDark=muted.",
+    "font": "family, weights and files (file per weight, looked up in <brand folder>/fonts/ first, then the template's fonts/). Inter (OFL) ships with the template.",
+    "logo": "color: logo for light surfaces, white: logo for dark surfaces. Files in this brand folder (SVG or PNG). The aspect ratio is read from the loaded image. Omit a key to draw no logo of that kind.",
+    "style": "default look. outline: outline width in px, 0 = flat with no strokes. shadow: 'offset' (solid offset copy) or 'soft' (blurred). radius: base corner radius in px. --style cartoon|flat on the scaffold overrides it (flat = outline 0 and soft shadow).",
+    "chrome": "chapterPill: numbered chapter title top left during chapters. logo: logo top right during chapters. Both are hidden on the end card.",
+    "icons": "source 'folder': at scaffold time every SVG in <brand folder>/icons/ is copied into the project's assets/icons/ (name them <id>_<color>.svg and <id>_<white>.svg, or just <id>.svg for a single-color set: it is then used for the color variant and a white copy is generated). source 'none' (default): no icons, assets/icons/ stays empty and scenes must not call K.icon, K.badge or K.chip with an icon. color and white are the file suffixes the engine loads: assets/icons/<id>_<color>.svg and <id>_<white>.svg.",
+    "spoken": "optional [regex, replacement] pairs merged into project.json spoken (how the voice should say brand words), for example [\"\\\\bAcme2\\\\b\", \"Acme two\"]",
+    "align": "optional expand entries merged into project.json align.expand ({token: [subtokens]}, matching the spoken forms)",
+    "rules": "short brand rules; printed by the scaffold and copied into PLAN.md under Look"
+  }
+}

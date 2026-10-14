@@ -1,0 +1,22 @@
+{
+  "model": "google/gemini-3-pro-image",
+  "style": "Playful 2D cartoon illustration in the style of a modern animated explainer series. Bold, rounded, simple shapes; clean, even outlines of medium weight in ink #1F2933 around every shape; flat colors with at most one soft shade; big expressive heads and large friendly eyes; simple bendy limbs; cheerful, warm. Strict palette: ink #1F2933, primary #3E4C59, accent #2680C2, highlight #F0B429 (small accents only), background #F5F7FA, white, line #CBD2D9, plus natural skin tones and natural hair colors. Diverse adults, tall and friendly.",
+  "isolate": "Isolated on a pure flat white background with a generous white margin on all sides, no floor shadow, no scenery, no frame, and absolutely NO text, letters, numbers, logos or brand marks anywhere. Any screens, laptops, documents and folders are blank or show only abstract shapes.",
+  "ref": "Use the reference image(s) only for the exact art style, line weight, palette and character design; create a NEW illustration of the scene described, not a copy of the reference scene.",
+  "jobs": {
+    "hero": {
+      "size": "2048x1152",
+      "prompt": "Three diverse colleagues stand close together in a row, all waving hello cheerfully; one holds an open laptop with a blank screen. Casual business clothes in the palette colors. Wide composition, full figures."
+    },
+    "character_one": {
+      "refs": ["hero"],
+      "size": "2048x2048",
+      "prompt": "A single character: a friendly colleague with short curly hair and a violet sweater, standing proudly and presenting with an open hand toward the right side, beaming. Full body."
+    },
+    "character_one_happy": {
+      "refs": ["hero", "character_one"],
+      "size": "2048x2048",
+      "prompt": "The second reference shows the exact character to draw. Draw the same character (identical design) delighted, both arms up, a big open smile. Full body."
+    }
+  }
+}

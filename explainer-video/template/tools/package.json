@@ -1,0 +1,7 @@
+{
+  "name": "explainer-video-tools",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Tools for this project. Dependencies (puppeteer-core, Python venv) live in the video runtime (VIDEO_RUNTIME, default ~/.video-runtime), not here."
+}

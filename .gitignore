@@ -1,0 +1,10 @@
+# runtime and caches
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+# secrets: never commit API keys
+.env
+.env.*
+# packaged skill files go in GitHub releases, not the repo
+*.skill

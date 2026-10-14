@@ -80,3 +80,8 @@ explainer-video/
 ## A note on responsible use
 
 Label AI-generated voice, illustrations and music in the film (the template's end card does this). Don't put personal or confidential data into prompts: narration text goes to the voice provider. Check brand guidelines before using AI imagery, and get legal review before making compliance claims about how a film was produced.
+
+## License
+
+Apache License 2.0, see [LICENSE](LICENSE). Bundled third-party files (the Inter font, SIL Open Font License 1.1) and dependencies installed at setup are listed in [explainer-video/LICENSES/THIRD_PARTY.md](explainer-video/LICENSES/THIRD_PARTY.md).
+
